@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Delete Recipe</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <header>
+    <h1>Delete Recipe</h1>
+    <a href="/">Back</a>
+  </header>
+  <main>
+    <form action="/delete" method="POST">
+      <label for="id">Select Recipe:</label>
+      <select id="id" name="id" required>
+        <% recipes.forEach(recipe => { %>
+          <option value="<%= recipe._id %>"><%= recipe.title %></option>
+        <% }) %>
+      </select>
+      <button type="submit">Delete</button>
+    </form>
+  </main>
+</body>
+</html>

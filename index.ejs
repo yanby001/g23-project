@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Healthy Recipes</title>
+  <link rel="stylesheet" href="/css/styles.css">
+
+</head>
+
+<body>
+
+  <header>
+
+    <h1>Welcome, <%= user %>!</h1>
+
+    <a href="/logout">Logout</a>
+
+  </header>
+
+  <main style="display: flex; justify-content: space-around; align-items: center; height: 100vh;">
+
+    <button style="font-size: 1.5em; padding: 15px 30px; margin: 10px;"
+      onclick="location.href='/create'">Create</button>
+
+    <button style="font-size: 1.5em; padding: 15px 30px; margin: 10px;" onclick="location.href='/read'">Read</button>
+
+    <button style="font-size: 1.5em; padding: 15px 30px; margin: 10px;"
+      onclick="location.href='/update'">Update</button>
+
+    <button style="font-size: 1.5em; padding: 15px 30px; margin: 10px;"
+      onclick="location.href='/delete'">Delete</button>
+  </main>
+</body>
+
+</html>
