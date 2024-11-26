@@ -9,11 +9,8 @@ const PORT = process.env.PORT || 8099;
 
 // Connect to MongoDB
 mongoose.connect('mongodb+srv://yanboyang086:Yby66635090@cluster0.go37o.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', {
-
   useNewUrlParser: true,
-
   useUnifiedTopology: true
-
 });
 
 // Middleware
@@ -143,5 +140,5 @@ app.delete('/api/recipes/:id', (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Server is running on port 'http://localhost:8099/login'`);
+  console.log(`Server is running on port 'http://localhost:${PORT}'`);
 });
